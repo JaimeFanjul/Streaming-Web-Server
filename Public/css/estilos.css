@@ -1,0 +1,270 @@
+/*
+* === Dynamic css and web page styles ===
+* === Author: Jaime Fanjul García ===
+* === Date: 20/08/2019 ===
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #282c34;
+}
+
+.plantilla {
+  display: grid;
+  grid-template-columns: 1.5fr 10fr;
+  grid-gap: 15px;
+  grid-template-areas:
+  "header content";
+}
+
+.plantilla_bateria {
+  display: grid;
+  grid-template-columns: 1.5fr 10fr;
+  grid-gap: 15px;
+  grid-template-areas:
+  "header content_baterias";
+}
+
+.header {
+  background-color: #21252b;
+  display: grid;
+  grid-area: header;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+  "logo"
+  "navbar";
+}
+
+.navbar {
+  grid-area: navbar;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+.content {
+ display: grid;
+ grid-area: content;
+ grid-template-rows: 1fr 2fr 2fr;
+ grid-gap: 2px;
+ text-align: center;
+ align-content: center;
+ grid-template-areas:
+ "general"
+ "baterias_voltaje"
+ "baterias_corriente";
+}
+
+.content_baterias {
+ display: grid;
+ grid-area: content_baterias;
+ grid-template-rows: 1fr 2fr;
+ grid-gap: 5px;
+ grid-template-areas:
+ "baterias_voltaje"
+ "baterias_corriente";
+}
+
+.logo {
+  margin-top: 10px;
+  text-align: center;
+  grid-area: logo;
+}
+
+.general {
+ display: grid;
+ grid-area: general;
+ grid-template-columns: auto auto auto;
+ grid-gap: 5px;
+ text-align: center;
+ align-content: center;
+ grid-template-areas:
+ "modo velocidad velocidad_ruedas"
+}
+
+.velocidad_ruedas{
+  display: grid;
+  grid-area: velocidad_ruedas;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+  text-align: center;
+  align-content: center;
+  grid-template-areas:
+  "velocidad_FWL velocidad_FWR"
+  "velocidad_RWL velocidad_RWR";
+}
+
+.baterias_voltaje {
+ margin_top: auto;
+ display: grid;
+ grid-area: baterias_voltaje;
+ grid-template-columns: auto auto;
+ grid-gap: 5px;
+ text-align: center;
+ align-content: center;
+ grid-template-areas:
+ "voltajeBat_graph voltajeBat"
+}
+
+.baterias_corriente {
+ margin-bottom: auto;
+ display: grid;
+ grid-area: baterias_corriente;
+ grid-template-columns: auto auto;
+ grid-gap: 5px;
+ text-align: center;
+ align-content: center;
+ grid-template-areas:
+ "corriente_graph corriente"
+}
+
+.velocidad {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 250px;
+ height: 130px;
+ margin-bottom: auto;
+ margin-top: auto;
+ text-align: center;
+ align-content: center;
+ grid-area: velocidad;
+}
+
+.modo_conduccion {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 250px;
+ height: 130px;
+ margin-bottom: auto;
+ margin-top: auto;
+ margin-left: auto;
+ margin-right: auto;
+ grid-area: modo;
+}
+
+.voltajeBat {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ grid-area: voltajeBat;
+ align-content: center;
+ text-align: center;
+ width: 250px;
+ height: 125px;
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
+.voltajeBat_graph {
+ grid-area: voltajeBat_graph;
+}
+
+.corriente {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ align-content: center;
+ text-align: center;
+ width: 250px;
+ height: 125px;
+ margin-top: auto;
+ margin-bottom: auto;
+ grid-area: corriente;
+}
+
+.corriente_graph {
+ grid-area: corriente_graph;
+}
+
+.velocidad_FWL {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 150px;
+ height: 100px;
+ margin-bottom: auto;
+ align-self: flex-start;
+ grid-area: velocidad_FWL;
+}
+
+.velocidad_FWR {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 150px;
+ height: 100px;
+ margin-bottom: auto;
+ align-self: flex-end;
+ grid-area: velocidad_FWR;
+}
+
+.velocidad_RWL {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 150px;
+ height: 100px;
+ margin-bottom: auto;
+ align-self: flex-start;
+ grid-area: velocidad_RWL;
+}
+
+.velocidad_RWR {
+ background: #21252b;
+ border: 1px solid #21252b;
+ -moz-border-radius: 9px;
+ -webkit-border-radius:9px;
+ width: 150px;
+ height: 100px;
+ margin-bottom: auto;
+ align-self: flex-end;
+ grid-area: velocidad_RWR;
+}
+
+
+h2{
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+h1{
+  color: #ABB2BF;
+  font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+  font-size: 16px;
+  margin-bottom: auto;
+}
+
+li{
+  list-style-type: none;
+}
+
+li a {
+  display: block;
+  color: #ABB2BF;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  color:#FFF;
+  background-color: #C40225;
+}

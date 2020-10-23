@@ -1,0 +1,65 @@
+<!-- Web Page HTML -->
+<!-- Author Jaime Fanjul García -->
+<!-- Date: 20/08/2020 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Uniovi eTech Racing - Telemetry System</title>
+  <link rel="icon" type="image/jpg" href="imagenes\logo_1.jpg"
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/estilos.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+  <script src="plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="plantilla">
+    <div class="header">
+      <div class="logo"><IMG SRC="imagenes\logo_sinfondo.jpg" ALT="Error loading logo" WIDTH=200 HEIGHT=100></div>
+      <div class="navbar">
+          <li><a href="index.html">General</a></li>
+          <li><a href="baterias.html">Baterias</a></li>
+          <li><a href="index.html">Unidad de control</a></li>
+          <li><a href="index.html">Ruedas</a></li>
+          <li><a href="index.html">Inversor</a></li>
+          <li><a href="index.html">Radiadores</a></li>
+          <li><a href="index.html">Diferencial</a></li>
+          <li><a href="index.html">Volante</a></li>
+          <li><a href="index.html">Reglajes</a></li>
+          <li><a href="index.html">Temperaturas</a></li>
+          <li><a href="index.html">Simulación</a></li>
+          <li><a href="index.html">Gráficos</a></li>
+      </div>
+    </div>
+    <div class="content">
+      <div class="general">
+        <div class="velocidad"><h1>VELOCIDAD</h1><h2 id="velocidad"></h2></div>
+        <div class="modo_conduccion"><h1>MODO CONDUCCIÓN</h1><h2 id="modo_conduccion"></h2></div>
+        <div class="velocidad_ruedas">
+          <div class="velocidad_FWL"><h1>FWL</h1><h2 id="velocidad_FWL"></h2></div>
+          <div class="velocidad_FWR"><h1>FWR</h1><h2 id="velocidad_FWR"></h2></div>
+          <div class="velocidad_RWR"><h1>RWR</h1><h2 id="velocidad_RWR"></h2></div>
+          <div class="velocidad_RWL"><h1>RWL</h1><h2 id="velocidad_RWL"></h2></div>
+        </div>
+      </div>
+      <div class="baterias_voltaje">
+        <div class="voltajeBat"><h1>VOLTAJE</h1><h2 id="voltajeBat"></h2></div>
+        <div class="voltajeBat_graph">
+          <div id="voltajeBat_chart">
+          <script src="bateria_graph.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="baterias_corriente">
+        <div class="corriente_graph">
+          <div id="corrienteBat_chart">
+             <script src="corriente_graph.js"></script>
+          </div>
+        </div>
+        <div class="corriente"><h1>CORRIENTE</h1><h2 id="corriente"></h2></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
